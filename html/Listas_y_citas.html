@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es-419">
+  <head>
+    <meta charset="utf-8">
+    <title>Apuntes Front End</title>
+
+    <meta name= "Author" content="Daniel rodreíguez">
+    <meta name="description" content="Curso básico para el aprendizaje de Front End">
+
+    <meta property="og:image" content="https://pbs.twimg.com/profile_images/1319636185917042688/w420P_NP_400x400.jpg">
+    <meta property="og:description" content="Este es el logotipo oficial de la marca personal.">
+    <meta property="og:title" content="????">
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"> </script>
+  </head>
+  <body>
+    <header>
+        <h1>Listas, citas y tablas</h1>
+      </header>
+      
+      <nav>
+        <ul id="barra_superior">
+          <li id="home"><a href="../Index.html">Home</a></li>
+          <li id="equipo"><a href="../nuestro_equipo.html">Nuestro equipo</a></li>
+          <li id="proyectos"><a href="../proyectos.html">Proyectos</a></li>
+          <li id="contacto"><a href="../contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      </nav>
+    
+  
+     
+      <article>
+          <h2 id="Lista_desordenada">Lista desordenada</h2>
+          <p>Utilizamos los comando &lt;ul&gt; para crear el espacio de trabajo de la lista y el elemento &lt;li&gt; para determinar 
+              entradas de la misma.
+          </p>
+          <ul>
+              <pre><p>
+                  &lt;ul&gt;
+                  &lt;p&gt;Lista de la compra:&lt;/p&gt;
+                    &lt;li&gt;Patatas&lt;/li&gt;
+                    &lt;li&gt;Coca-Cola&lt;/li&gt;
+                    &lt;li&gt;Nata montada&lt;/li&gt;
+                  &lt;/ul&gt;
+              </p></pre>
+          </ul>
+          <p>Resultado:</p>
+          <ul>
+              <p>Lista de la compra:</p>
+              <li>Patatas</li>
+              <li>Coca-Cola</li>
+              <li>Nata montada</li>
+          </ul>
+      </article>
+
+      <article>
+          <h2 id="Lista_ordenada">Lista ordenada</h2>
+          <p>Exactamente el mismo sistema anterior pero en vez de usar &lt;ul&gt; usaremos &lt;ol&gt;,
+              lo que creará una lista enumerada automáticamente.
+          </p>
+          <ul>
+              <pre><p>
+                  &lt;ol&gt;
+                  &lt;p&gt;Lista de la compra:&lt;/p&gt;
+                  &lt;li&gt;Patatas&lt;/li&gt;
+                  &lt;li&gt;Coca-Cola&lt;/li&gt;
+                  &lt;li&gt;Nata montada&lt;/li&gt;
+                  &lt;/ol&gt;
+              </p></pre>
+          </ul>
+          <p>Resultado:</p>
+          <ol>
+            <p>Lista de la compra:</p>
+            <li>Patatas</li>
+            <li>Coca-Cola</li>
+            <li>Nata montada</li>
+          </ol>
+      </article>
+
+      <article>
+          <h2 id="Lista_mixta">Lista anidada o mixta</h2>
+          <p>Podemos mezclar los dos elementos anteiores como más nos guste si fuera necesario</p>
+      </article>
+
+      <article>
+          <h2 id="Lista_descripciones">Listas de descripciones</h2>
+            <p>Utilizaremos el elemento &lt;dl&gt; para englobar la lista como lo haríamos con &lt;ul&gt; o &lt;ol&gt;.</p>
+            <p>Cada elemento a definir estará englobado entre &lt;dt&gt; y cada definición entre &lt;dd&gt;.</p>
+            <p>Resultado:</p>
+            <ul> 
+            <dl>
+               <dt>soliloquio</dt>
+               <dd>En las obras dramáticas, corresponde a cuando un personaje se habla a sí mismo para representar sus pensamientos o sentimientos internos y, en el proceso, transmitirlos a la audiencia (pero no a otros personajes).</dd>
+               <dt>monólogo</dt>
+               <dd>En las obras dramáticas, corresponde a cuando un personaje habla de sus pensamientos en voz alta para compartirlos con el público y cualquier otro personaje presente.</dd>
+               <dt>aparte</dt>
+               <dd>En las obras dramáticas, corresponde a cuando un personaje comparte un comentario solo con la audiencia para dar efecto cómico o dramático. Suele ser un sentimiento, un pensamiento o información adicional.</dd>
+             </dl>
+            </ul>
+      </article>
+
+      <article>
+          <h2 id="Blockquote">Cita en bloque independiente (Blockquote o salto de página con margen)</h2>
+            <p>Si una sección de contenido a nivel de bloque se cita en otro lugar, debes envolverla dentro de un elemento &lt;blockquote&gt;.</p>
+            <p>El elemento &lt;blockquote&gt; indica que el texto se limita a una información que existe en otro lado</p>
+            <p>Para incluir una URL que apunte a la fuente de la información utilizamos el atributo <code>cite</code></p>
+             <ul>
+                 &lt;blockquote cite="https://www.hazunaweb.com/curso-de-html/blockquote-span-nobr-center/#:~:text=El%20blockquote%20se%20usa%20para,observar%20el%20efecto%20del%20blockquote."&gt;
+                    &lt;p&gt;El elemento HTML <code>&lt;blockquote&gt;</code> indica que el texto al que delimita es una cita ampliada&lt;/p&gt;
+                &lt;/blockquote&gt;
+             </ul>
+             <p>Resultado:</p>
+             <blockquote cite="https://www.hazunaweb.com/curso-de-html/blockquote-span-nobr-center/#:~:text=El%20blockquote%20se%20usa%20para,observar%20el%20efecto%20del%20blockquote.">
+                <p>El elemento HTML <code>&lt;blockquote&gt;</code> indica que el texto al que delimita es una cita ampliada</p>
+              </blockquote>
+      </article>
+
+      <article>
+          <h2 id="Citas_en_línea">Citas en línea</h2>
+            <p>Funciona de la misma manera sólo que se usa el elemento &lt;q&gt;</p>
+            <ul>
+                &lt;p&gt;El elemento de cita - <code>&lt;q&gt;</code> - se &lt;q cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/q/p">utiliza 
+                    para citas breves que no requieren salto de párrafo&lt;/q&gt;.&lt;/p&gt;s 
+            </ul>
+            <p>Resultado:</p>
+             <p>El elemento de cita - <code>&lt;q&gt;</code> - se <q cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/q/p">utiliza 
+                para citas breves que no requieren salto de párrafo</q>.</p>
+      </article>
+
+      <article>
+          <h2 id="Citas">Citas</h2>
+          <p>La información anterior solo es visible desde el código o para los lectores de pantalla, pero existe un elemento destinado
+              a contener el título del recurso que se cita</p>
+            <p>Es el elemento <code>cite</code></p>
+             <ul>
+                <pre>&lt;p/gt;De acuerdo con &lt;a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote"&gt;
+                    &lt;cite&gt;página de citas en bloque independiente de MDN&lt;/cite&gt;&lt;/a&gt;:
+                    &lt;/p&gt;
+
+                    &lt;blockquote cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote"&gt;
+                        &lt;p&gt;El &lt;strong&gt;elemento HTML <code>&lt;blockquote&gt;</code>&lt;/strong&gt; (o &lt;em&gt;elemento HTML de cita
+                        en bloque independiente&lt;/em&gt;) indica que el texto al que delimita es una cita ampliada.&lt;/p&gt;
+                      &lt;/blockquote&gt;
+
+                    &lt;p&gt;El elemento de cita — <code>&lt;q&gt;</code> — se &lt;q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;utiliza en
+                        citas breves que no requieren saltos de párrafo.&lt;/q&gt; -- &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;
+                        /lt;cite&gt;página q de MDN&lt;/cite&gt;&lt;/a&gt;.&lt,/p&gt;
+                </pre>  
+             </ul>
+            <p>Resultado:</p>
+            <p>De acuerdo con <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
+                <cite>página de citas en bloque independiente de MDN</cite></a>:
+                </p>
+                
+                <blockquote cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
+                  <p>El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o <em>elemento HTML de cita
+                  en bloque independiente</em>) indica que el texto al que delimita es una cita ampliada.</p>
+                </blockquote>
+                
+                <p>El elemento de cita — <code>&lt;q&gt;</code> — se <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">utiliza en
+                citas breves que no requieren saltos de párrafo.</q> -- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+                <cite>página q de MDN</cite></a>.</p>
+      </article>
+
+      <article>
+        <h2 id="tablas">Tablas</h2>
+        <p>A continuación vamos a aprender como hacer tablas en HTML. Para comenzar deberemos enmarcar la tabla en el elemento &lt;table&gt;, esto limita la información 
+          contenida en la tabla. Para entender como vamos a realizar las tablas debemos saber que las tablas en HTML se realizan por filas olvidando las columnas, ya que, 
+          separando la información que incluimos en las filas creamos las columnas, es decir, para hacer una tabla de tres columnas y tres filas, escribiremos tres filas con 
+          tres separaciones que serán las que creen las columnas.
+        </p>
+        <p>La primera fila que escribimos en una tabla siempre es la fila que da título a las columnas y a los que vamos a incluir en ellas, esta fila se escribe 
+          entre el comando &lt;tr&gt; y cada apartado de la fila a partir del comando &lt;th&gt;. Después de la fila de títulos las demás filas también se escriben entre
+        el comando &lt;tr&gt; y cada casilla de ta tabla entre el comando &lt;td&gt;. Vamos a verlo con un ejemplo de una tabla de 4x3 (4 filas con 3 columnas):        </p>
+        <ul>
+          <pre>
+            <code>
+              &lt;table&gt;
+
+                &lt;tr&gt;
+              
+                  &lt;th>Hoy&lt;/th&gt;
+              
+                  &lt;th>Mañana&lt;/th&gt;
+              
+                  &lt;th>Viernes&lt;/th&gt;
+               
+                &lt;/tr&gt;
+              
+                &lt;tr&gt;
+              
+                  &lt;td>Soleado&lt;/td&gt;
+              
+                  &lt;td>Mayormente soleado&lt;/td&gt;
+              
+                  &lt;td>Parcialmente nublado&lt;/td&gt;
+              
+                &lt;/tr&gt;
+              
+                &lt;tr&gt;
+              
+                  &lt;td>19°C&lt;/td&gt;
+              
+                  &lt;td>17°C&lt;/td&gt;
+              
+                  &lt;td>12°C&lt;/td&gt;
+              
+                &lt;/tr&gt;
+              
+                &lt;tr&gt;
+              
+                  &lt;td>E 13 km/h&lt;/td&gt;
+              
+                  &lt;td>E 11 km/h&lt;/td&gt;
+              
+                  &lt;td>S 16 km/h&lt;/td&gt;
+              
+                &lt;/tr&gt;
+              
+              &lt;/table&gt;
+            </code>
+          </pre>
+        </ul>
+        <p>Resultado:</p>
+        <table>
+
+          <tr>
+        
+            <th>Hoy</th>
+        
+            <th>Mañana</th>
+        
+            <th>Viernes</th>
+        
+          </tr>
+        
+          <tr>
+        
+            <td>Soleado</td>
+        
+            <td>Mayormente soleado</td>
+        
+            <td>Parcialmente nublado</td>
+        
+          </tr>
+        
+          <tr>
+        
+            <td>19°C</td>
+        
+            <td>17°C</td>
+        
+            <td>12°C</td>
+        
+          </tr>
+        
+          <tr>
+        
+            <td>E 13 km/h</td>
+        
+            <td>E 11 km/h</td>
+        
+            <td>S 16 km/h</td>
+        
+          </tr>
+        
+        </table>
+      </article>
+
+  
+
+      <main>
+        <aside>
+            <ul>
+              <p>Enlaces de interés</p>
+              <li><a href="https://github.com/">Github</a></li>
+            </ul>
+          </aside> 
+    </main>
+
+    <footer>
+      <address><p>2021 by Daniel Rodríguez   |   <a href="mailto:danielrodriguezsuarezbustillo@gmail.com">danielrodriguezsuarezbustillo@gmail.com</a></p></address>
+    </footer>
+
+  </body>
+
+  </html>

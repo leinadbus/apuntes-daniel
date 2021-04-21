@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es-419">
+  <head>
+    <meta charset="utf-8">
+    <title>Apuntes Front End</title>
+
+    <meta name= "Author" content="Daniel rodreíguez">
+    <meta name="description" content="Curso básico para el aprendizaje de Front End">
+
+    <meta property="og:image" content="https://pbs.twimg.com/profile_images/1319636185917042688/w420P_NP_400x400.jpg">
+    <meta property="og:description" content="Este es el logotipo oficial de la marca personal.">
+    <meta property="og:title" content="????">
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styleparahypervinculos.css">
+    <script src="script.js"> </script>
+  </head>
+  <body>
+    <header>
+        <h1>Hypervinculos HTML</h1>
+      </header>
+      
+      <nav>
+        <ul id="barra_superior">
+          <li id="home"><a href="../Index.html">Home</a></li>
+          <li id="equipo"><a href="../nuestro_equipo.html">Nuestro equipo</a></li>
+          <li id="proyectos"><a href="../proyectos.html">Proyectos</a></li>
+          <li id="contacto"><a href="../contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    
+    
+     <article>
+         <h2 id="Redacción_de_enlaces">Redacción de enlaces</h2>
+           <p>Usaremos el comando &lt;a mas el elemento href=".."</p>
+            <ul>
+              <pre><p>&lt;p&gt;&lt;a href="https://firefox.com/"&gt;Descargar Firefox&lt;/a&gt;&lt;/p&gt;</p></pre>
+            </ul>
+           <p>Resultado:</p>
+           <p><a href="https://firefox.com/">Descargar Firefox</a></p>
+           <p>Si queremos que el enlace se abra en una pestaña nueva deberemos incluir el elemento <code>target="blank"</code></p>
+           <ul>
+            <pre><p>&lt;p&gt;&lt;a href="https://firefox.com/" target="blank"&gt;Descargar Firefox&lt;/a&gt;&lt;/p&gt;</p></pre>
+           </ul>
+     </article>
+
+     <article>
+         <h2 id="Menú_de_navegación">Menú de navegación</h2>
+           <p>Convinando el comando de lista desordenada visto anteriormente y el comando de enlace, podemos
+             crear un menú de navegación entre archivos .html.
+           </p>
+           <p>Para ello debemos crear varios documentos .html y enlazarlos con el comando &lt;a añadiendo el nombre del documento
+             .html en el elemento href="..".
+           </p>
+           <p>Todos los documentos que estas leyendo estan enlazados entre sí como un menú de navegación, por tanto, son un ejemplo del mismo.</p>
+     </article>
+
+     <article>
+         <h2 id="Enlace_correo_electrónico">Enlace a correo electrónico</h2>
+           <p>El mismo sistema de comando y elemento anteriormente visto pero añadiendo el elemento mailto: despues de href.</p>
+            <ul>
+             <pre><p>&lt;p&gt;&lt;a href="mailto:correo@example.com"&gt;Enlace a correo electrónico&lt;/&gt;&lt;/p&gt;</p>
+             </pre>
+            </ul>
+           <p>Resultado:</p>
+           <p><a href="mailto:email@example.com">Enlace a correo electrónico</a></p>
+     </article>
+
+     <article>
+         <h2 id="Especificar_detalles_correo">Especidifcar detalles de envío</h2>
+           <p>Igual que podemos enlazar a un correo electrónico, podemos pre definir elementos como el cuerpo
+             del mensaje, el asunto, si enviar copia o si enviar con copia oculta. </p>
+           <p>Estos son los elemtos &lt;subject&gt; para el asunto del mail, &lt;body&gt; para el cuerpo,
+             &lt;cc&gt; para hacer "con copia a" y &lt;bcc&gt; para hacer "con copia oculta a".
+           </p>
+            <ul>
+              <pre><p>&lt;p&gt;&lt;a href="mailto:email@example.com?cc=leinadbus3@gmail.com&bcc=leinadbus3@gmail.com&subject=El%20asunto%20del%20email&body=El
+                %20Cuerpo%20del%20correo"> Enviar un correo electrónico cc, bcc, asunto y cuerpo 
+               &lt;0a&gt;&lt;p/&gt;</p></pre>
+            </ul>
+           <p>Resultado></p>
+           <p><a href="mailto:email@example.com?cc=leinadbus3@gmail.com&bcc=leinadbus3@gmail.com&subject=El%20asunto%20del%20email&body=El%20Cuerpo%20del%20correo">
+            Enviar un correo electrónico cc, bcc, asunto y cuerpo 
+          </a></p>
+     </article>
+
+     <article>
+         <h2 id="Información_de_asistencia">Añadir información de asistencia</h2>
+           <p>Esta información nos facilita conocer mas información sobre a donde se dirige el enlace, u otros usos que puedas darle</p>
+           <p>Esto se utiliza con el comando &lt;a con el elemento title=".."</p>
+            <ul>
+             <pre><p>&lt;p&gt;&lt;a href="https://www.chollometro.com/" title="Como ir de compras sin dinero">web favorita&lt;/a&gt;</p></pre>
+            </ul>
+           <p>Resultado:</p>
+           <p>Enlace a mi <a href="https://www.chollometro.com/" title="Como ir de compras sin dinero">web favorita</a></p>
+     </article>`
+
+     <article>
+         <h2 id="Enlace_en_imagen">Enlace en una imagen</h2>
+           <p>Simplemente donde anteriormente incluiamos el texto donde iria el enlace, aquí tulizaríamos el comando &lt;img src="imagen.png"&gt;</p>
+            <ul>
+             <pre><p>&lt;a href="https://firebox.com/collections/gifts-for-her?page=7&t=feature&via=hp"&gt;&lt;img src="imagen.png"&gt;&lt;/a&gt;</p></pre>
+            </ul>
+           <p>Resultado:</p>
+           <p><a href="https://firebox.com/collections/gifts-for-her?page=7&t=feature&via=hp"><img src="../imagen.png"></a></p>
+     </article>
+
+     <article>
+         <h2 id="Directorio_y_subcarpetas">Enlace a directorio y subcarpetas</h2>
+           <p>A veces los documentos a los que queramos acceder no estarán en la misma carpeta donde se encuentra el documento .html actual.
+             Para acceder a ellos debemos usar dos caracteres que le dirán a la máquina que acceda a otras carpetas o que salga de las mismas.
+             Estos elementos son "/" y "../"
+           </p>
+           <p>Dentro del comando &lt;a href=".." deberemos decirle a la máquina donde se encuentra el documento que queremos que use, ya sea una imagen, un archivo .html, un archivo .css 
+             o un archivo de cualquier índole que queramos utrilizar. Para ello imaginemos que queremos enlazar otro documento .html en una lista desordenada, pero
+             dicho documento se encuentra en una carpeta llamada <code>CarpetadeJuan</code> y dentro de esta carpeta el archivo al que queremos enlazar se llama
+             <code>archivo_de_juan.html</code>. 
+           </p>
+            <ul>
+             <p>Bajar en directorios:</p>
+             <pre><p>
+                 &lt;ul&gt;
+                 &lt;p&gt;&lta href="CarpetadeJuan/archivo_de_juan.html"&gt; Example&lt;/a&gt;&lt;/p&gt;
+                 &lt;/ul&gt;
+             </p></pre>
+            </ul>
+           <p>Imaginemos ahora que nos encontramos programando el <code>archivo_de_juan.html</code>, y queremos introducir un enlace dentro del archivo
+        a un archivo que se encuentra fuera de la <code>CarpetadeJuan</code>, el archivo al que queremos enlazar se llama, por ejemplo, <code>página_principal.html</code>.
+        Para ello debemos decirle a la máquina que salga de la <code>CarpetadeJuan</code> y busque en esa carpeta superior el archivo </p>
+           <ul>
+            <pre><p>
+                &lt;ul&gt;
+                &lt;p&gt;&lta href="../página_principal.html"&gt; Example&lt;/a&gt;&lt;/p&gt;
+                &lt;/ul&gt;
+            </p></pre>
+           </ul>
+     </article>
+
+     <article>
+         <h2 id="Enlazar_a_descarga">Enlazar a una descarga</h2>
+         <p>Podemos decirle al navegardor, no solo que se dirija al documento que le digamos, sino que descargue el archivo que pueda encontrarse dentro
+             de dicho documento, esto lo haremos usando el elemento <code>download</code>
+         </p>
+         <ul>
+             <pre><p>
+                &lt;p&gt;&lt;a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=es-MX"
+                download="firefox-latest-64bit-installer.exe"&gt;Descarga la última versión de Firefox para Windows (64 bits) (Español, es-MX)
+                 &lt;/a&gt; Cuidado que la descarga de verdad xD&lt;/p&gt;
+             </p></pre>
+         </ul>
+         <p>Resultado:</p>
+         <p><a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=es-MX"
+            download="firefox-latest-64bit-installer.exe">Descarga la última versión de Firefox para Windows (64 bits) (Español, es-MX)
+             </a> Cuidado que la descarga de verdad xD</p>
+     </article>
+
+
+   
+
+     <main>
+      <aside>
+          <ul>
+            <p>Enlaces de interés</p>
+            <li><a href="https://github.com/">Github</a></li>
+          </ul>
+        </aside> 
+     </main>
+
+    <footer>
+      <address><p>2021 by Daniel Rodríguez   |   <a href="mailto:danielrodriguezsuarezbustillo@gmail.com">danielrodriguezsuarezbustillo@gmail.com</a></p></address>
+    </footer>
+
+  </body>
+
+  </html>

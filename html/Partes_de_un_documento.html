@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es-419">
+  <head>
+    <meta charset="utf-8">
+    <title>Apuntes Front End</title>
+
+    <meta name= "Author" content="Daniel rodreíguez">
+    <meta name="description" content="Curso básico para el aprendizaje de Front End">
+
+    <meta property="og:image" content="https://pbs.twimg.com/profile_images/1319636185917042688/w420P_NP_400x400.jpg">
+    <meta property="og:description" content="Este es el logotipo oficial de la marca personal.">
+    <meta property="og:title" content="????">
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styleparadocumento.css">
+    <script src="script.js"> </script>
+  </head>
+  <body>
+    <header>
+        <h1>Partes básicas de un documento HTML</h1>
+    </header>
+
+    <nav>
+      <ul id="barra_superior">
+        <li id="home"><a href="../Index.html">Home</a></li>
+        <li id="equipo"><a href="../nuestro_equipo.html">Nuestro equipo</a></li>
+        <li id="proyectos"><a href="../proyectos.html">Proyectos</a></li>
+        <li id="contacto"><a href="../contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    
+
+    <article>
+        <h2 id="Cómo_empezar">Cómo empezar</h2>
+          <p>Crear un archivo .html para programar</p>
+           <ol>
+            <li>Lo primero que haremos será descargar e instalar un programa de edición de código, el programa que uses queda a tu elección,                
+                los más usados del mercado son: <a href="https://code.visualstudio.com/download"target="_blank"> Visual Studio code</a>, 
+                <a href="https://www.sublimetext.com/3"target="_blank">Sublime Text</a> o <a href="https://atom.io/"target="_blank">Atom</a>.
+            </li>
+            <li>Depués crearemos una carpeta, en el escritorio por ejemplo, con el nombre que queramos</li>
+            <li>Seguidamente, buscaremos esta carpeta desde el editor de código y crearemos un documento llamado index.html (por norma general,
+                las páginas principales siempre tiene el nombre de index y la extensión .html es para que el archivo tenga la extensión adecuada 
+                para escribir código en él).
+            </li>
+            <li>Lo primero que escribiremos en el archivo será el comando &lt!DOCTYPE html&gt;y el comando &lt;html&gt; y &lt;/html&gt; en la siguiente línea.
+                Absolutamente TODO el documento estará escrito entre estos dos comandos. Lo que estamos haciendo es decirle al archivo en qué idioma
+                vamos a hablarle y entre qué lineas estará ese idioma.
+            </li>
+
+           </ol>
+
+    </article>
+
+    <article>
+        <h2 id="Partes_y_código">Partes y código</h2>
+        <p>En este artículo vamos a diferenciar las partes básicas que contiene un archivo .html</p>
+           <p>Todo archivo .html tiene como mínimo dos partes globales: el &lt;head&gt; y el &lt;body&gt;.</p> 
+            <p>Partes del &lt;head&gt;</p>
+              <ol>
+                  <p>El &lt;head&gt; es la parte del documento .html que contiene la información necesaria para que sucedan los siguientes casos: </p>
+                <li>Que el archivo .html contenta la referencia de los carcateres que van a usarse al visualizar el contenido. el código de caracteres que más
+                    idiomas engloba es el utf-8.
+                </li>
+                <li>Que el archivo .html contenga el título de la página.</li>
+                <li>Que el archivo .html contenga información del autor del código.</li>
+                <li>Que el archivo .html contenga información relativa al contenido del archivo. Esta información suele ser la información SEO de refencia de la página</li>
+                <li>Que el archivo .html contenga información de la propiedad del propio archivo.</li>
+                <li>Que el archivo .html contenga el enlace al favicon.ico que será usado en los exploradores</li>
+                <li>Que el archivo .html contenga enlaces de referencia a los archivos .css o a los scripts que van a ser usados para completar el archivo</li>
+            <p>Toda esta información no es legible desde el navegador, solamente accesible desde el propio código fuente del archivo .html</p>
+            <p>*nota: el elemento <code>lang=".."</code> se refiere al idioma al que va dirigido este documento. El que abajo se muestra es la referencia al 
+                Español válido para España y latinoamérica.
+            </p>
+            <p>*nota: el favicon es el elemento que muestra el logotipo en la pestaña del navegador.</p>  
+            </ol>
+            <p>Ejemplo visual:</p>
+            <img src="Ejemplo_head.png"> 
+        
+            <p>Partes del &lt;body&gt;</p>
+        <ul>
+            <li>Encabezado: &lt;header&gt;: Normalmente contiene el nombre de la página o el logotipo. suele ser invariable, siempre muestra la misma información dentro de un mismo proyecto.</li>
+            <li>Menú de navegación: &lt;nav&gt;. Suele incluir un listado con enlaces a sitios como Home, Sobre nosotros, Proyecto o contacto.</li>
+            <li>Contenido principal: &lt;main&gt;, con varias subsecciones (además de la barra lateral) representadas por los elementos &lt;article&gt;, &lt;section&gt; y &lt;div&gt;.</li>
+            <li>Barra lateral: &lt;aside&gt; a menudo colocada dentro de &lt;main&gt;. Son o suelen ser enlaces de interés a otras páginas.</li>
+            <li>Pie de página: &lt;footer&gt;.</li>
+          </ul>
+        <p><a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html"target="_blanck">Ejemplo de un estructura básica.</a> </p>
+    </article>
+    
+    <article>
+        <h2 id="Elementos_en_detalle">Elementos de diseño HTML en detalle</h2>
+        <ul>
+            <li>&lt;main&gt; encierra el contenido particular a esta página. utilizaremos &lt;main&gt; solamente una vez 
+              para cada página y lo situaremos directamente dentro del elemento &lt;body&gt;. Es mejor que no lo anidemos en otros elementos.
+            </li>
+            <li>&lt;article&gt; encuadra un bloque de contenido que tiene sentido por sí mismo aparte del resto de la 
+              página (por ejemplo una entrada en un blog)
+            </li>
+            <li>&lt;section&gt; es parecido al elemento &lt;article&gt;, pero se una más para agrupar cada parte de la página
+              que, por su funcionalidad, constituye una sección en sí misma (por ejemplo un minimapa o un conjunto de titulares
+              y resúmenes). Se considera una buena práctica comenzar cada una de estas secciones con un título de encabezado (heading); observa que podemos 
+              subdividir articulos en distintas secciones, o también secciones en distintos artículos, dependiendo del contexto.
+            </li>
+            <li>&lt;aside&gt; incluye contenido que no está directamente relacionado con el contenido principal, pero que puede aportar
+              información adicional relacionada indirectamente con él (resúmenes, biografías del autor, enlaces relacionados).
+            </li>
+            <li>&lt;header&gt; representa un grupo de contenido introductorio. Si este es "hijo" de un elemento
+              &lt;body&gt;, se convertirá en el encabezado principal del sitio web, pero si es hijo de un elemento &lt;article&gt; 
+              o un elemento &lt;section&gt;, entonces simplemente será el encabezado particular de cada sección (por favor, no los confundas con los titulos y los encabezados)
+            </li>
+            <li>&lt;nav&gt; contiene la funcionalidad de navegación principal de la página. los enlaces secundarios, etc., no estrarán en la navegación</li>
+            <li>&lt;footer&gt; representa un grupo de contenido al final de la página.</li>
+          </ul>
+    </article> 
+
+    <article>
+        <h2 id="Envolturas_no_semánticas" >Envolturas no semánticas</h2>
+      <p>A veces hay situaciones en las que no encuentras un elemento semántico adecuado para agrupar ciertos elementos o enblogar cierto contenido.
+        Podrías querer agrupar ciertos elementos para referirte a ellos como una entidad que comparta cierto <u>CSS</u> o <u></u>JavaScript</u>.
+        Para casos como estos, HTML dispone del elemento %lt;div&gt; y el elemento &lt;span&gt;. Preferentemente estos elementos se deberán utlizar
+        con sus atributos (&lt;class&gt;), para conferirles algún tipo de etiquetado que permita determinarlos con facilidad.
+      </p>
+      <p>&lt;span&gt; es un elemento no-semántico que se utioliza en el interior de una línea. Se utiliza cuando no se nos ocurre el uso de ningún 
+      otro elemento semántico de tecto en el que incluir el contenido, o sino se desea añadir ningún significado específico. Por ejemplo:
+      </p>
+     <ul>
+         <p>&lt;p&gt;El rey volvió ebrio a su habitación alrededor de la 01:00, y sin duda la cerveza no le ayudaba
+         cuando cruzó tambaleante la puerta &lt;span class="editor-note"&gt;[nota del editor: en este instante de la
+         representación, deberían atenuarse las luces]&lt;/span&gt;.&lt;/p&gt;</p>
+     </ul>
+     <p>En este caso, la nota del editor solo proporcionará información extra para el editor de la obrra; se supone que estos elementos no 
+       incluyen contenido extra importante. Para los usuários sin discapacidad visual, quizas debamos usar CSS para diferenciar sutilmente estas notas del texto principal.
+       </p>
+      <p>&lt;div&gt; es un elemento de bloque no-semántico; lo utilizarás cuando no se te ocurra el uso de otro elemento semántico mejor, o si no deseas añadir ningún significado concreto.
+        Por ejemplo, imagina un carrito de compras que puedes pulsar en cualquier momento durante tu estancia en una tienda virtual:
+      </p>
+      <ul>
+        <pre><p>&lt;div class="chopping-cart"&gt;<br>
+            &lt;h2&gt; Carrito de compras &lt;/h2&gt;<br>
+            &lt;ul&gt;<br>
+               &lt;li&gt;<br>
+                 &lt;p&gt;%lt;a href=""&gt;&lt;strong&gt; Pendientes de plata&lt;/strong&gt;&lt;/a&gt;:$99.95.&lt/p&gt;<br>
+                 &lt;img src="../products/3333-0985/" alt="pendientes de plata"&gt;<br>
+               &lt;/li&gt;<br>
+               &lt;li&gt;<br>
+               ... <br>
+               &lt;/li&gt;<br>
+            &lt;/ul&gt;<br>
+            &lt;p&gt; Importe total: 237.89&lt;/p&gt;<br>
+           &lt;/div&gt;
+        </p></pre>
+      </ul>
+    </article>
+
+    <main>
+        <aside>
+            <ul>
+              <p>Enlaces de interés</p>
+              <li><a href="https://github.com/">Github</a></li>
+            </ul>
+          </aside> 
+    </main>
+
+    <footer>
+      <address><p>2021 by Daniel Rodríguez   |   <a href="mailto:danielrodriguezsuarezbustillo@gmail.com">danielrodriguezsuarezbustillo@gmail.com</a></p></address>
+    </footer>
+
+  </body>
+
+  </html>

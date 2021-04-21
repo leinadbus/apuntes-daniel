@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es-419">
+  <head>
+    <meta charset="utf-8">
+    <title>Apuntes Front End</title>
+
+    <meta name= "Author" content="Daniel rodreíguez">
+    <meta name="description" content="Curso básico para el aprendizaje de Front End">
+
+    <meta property="og:image" content="https://pbs.twimg.com/profile_images/1319636185917042688/w420P_NP_400x400.jpg">
+    <meta property="og:description" content="Este es el logotipo oficial de la marca personal.">
+    <meta property="og:title" content="????">
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"> </script>
+  </head>
+  <body>
+    <header>
+        <h1>Formularios html5</h1>
+      </header>
+      
+      <nav>
+        <ul id="barra_superior">
+          <li id="home"><a href="../Index.html">Home</a></li>
+          <li id="equipo"><a href="../nuestro_equipo.html">Nuestro equipo</a></li>
+          <li id="proyectos"><a href="../proyectos.html">Proyectos</a></li>
+          <li id="contacto"><a href="../contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <article>
+          <h2 id="elemento_input">Elemento Input</h2>
+            <p>El elemento input tiene en html5 nuevos valores para el atributo Type:</p>
+             <li><code>search</code>>: representa una caja de búsqueda. Los saltos de línea son quitados del valor ingresado pero no se modifica ninguna otra sintaxis.</li>
+             <li><code>tel</code>: representa un control para editar un número de teléfono. Puedes usar los tributos <code>pattern</code> y <code>maxlength</code> para restringir
+               los valores ingresados en la caja.</li>
+             <li><code>url</code>: representa un control para editar una URL.</li>
+             <li><code>email</code>: representa una dirección de correo electrónico. El campo de ingreso solo funcionará si la dirección ingresada satisface la producción 
+               ABNF <code>1*( atext / "." ) "@" ldh-str 1*( "." 1ldh-str )</code> donde <code>atext</code> está definida en RFC 5322, sección 3.2.3 y 
+               <code>ldh-str</code> está definida en RFC 1034, sección 3.5. Podemos agregar varias direcciones de correo que el atributo <code>multiple</code> está agregado.</li>
+    
+           <ul>
+               <li>Ejemplo search:</li>
+                   <p><code>&lt;label for="gseacrh"&gt;Search Google:&lt;/label&gt;<br>
+                   &lt;input type="search" id="gsearch" name="gsearch"&gt;
+                   </code></p>
+               <li>Ejemplo tel:</li>
+                   <p><code>&lt;label for="phone"&gt; Enter your phone number:&lt;/label&gt;<br>
+                   &lt;input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"&gt;</code></p>
+               <li>Ejemplo url:</li>
+                   <p><code>&lt;label for="homepage"&gt;Add your homepage:&lt;/label&gt;<br>
+                   &lt;input type="url" id="homepage" name="homepage"&gt;</code></p>
+               <li>Ejemplo email:</li>
+                   <p><code>&lt;label for="email"&gt;Enter your email:&lt;/label&gt;<br>
+                   &lt;input type="email" id="email" name="email"&gt;</code></p>
+           </ul>
+
+           <li>Resultado search:</li>
+             <label for="gsearch">Search Google:</label>
+             <input type="search" id="gsearch" name="gsearch">
+           <li>Resultado tel:</li>
+             <label for="phone">Enter your phone number:</label>
+             <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">    
+           <li>Resultado url:</li> 
+             <label for="homepage">Add your homepage:</label>
+             <input type="url" id="homepage" name="homepage">
+           <li>Resultado email:</li>
+             <label for="email">Enter your email:</label>
+             <input type="email" id="email" name="email">
+
+             <p>Existen muchos otros elementos para el Input que puedes encontrar <a href="https://www.w3schools.com/tags/att_input_type.asp" target="_blank">aquí.</a></p>
+      </article>
+    
+      <article>
+         <h2 id="elemento_form">El elemento Form</h2>
+           <p>el elemento &lt;form&gt; representa una sección de un documento que contiene controles interactivos que permiten al usuario enviar información a un servidor.</p>
+           <p>Como cualquier otro elemento HTML soporta atributos globales como:<code>accept/accept-charset/action/autocomplete/enctype/method/name/novalidate/target.</code></p>
+             <ul>
+                 <p>Ejemplo del uso de form:</p>
+                <pre>
+                &lt;!-- Formulario simple que enviará una petición GET --&gt;
+                &lt;form action=""&gt;
+                &lt;label for="GET-name"&gt;Nombre:&lt;/label&gt;
+                &lt;input id="GET-name" type="text" name="name"&gt;
+                &lt;input type="submit" value="Save"&gt;
+                &lt;/form&gt;
+  
+                &lt;!-- Formulario simple que enviará una petición POST --&gt;
+                 &lt;form action="" method="post"&gt;
+                 &lt;label for="POST-name"&gt;Nombre:&lt;/label&gt;
+                 &lt;input id="POST-name" type="text" name="name"&gt;
+                 &lt;input type="submit" value="Save"&gt;
+                 &lt;/form&gt;
+  
+                 &lt;!-- Formulario con conjunto de campos, leyenda y etiqueta --&gt;
+                 &lt;form action="" method="post"&gt;
+                 &lt;fieldset&gt;
+                 &lt;legend&gt;Título&lt;/legend&gt;
+                 &lt;input type="radio" name="radio" id="radio"&gt; &lt;label for="radio"&gt;Clic aquí&lt;/label&gt;
+                 &lt;/fieldset&gt;
+                 &lt;/form&gt;
+                </pre>
+             </ul>
+            <p>Resultado:</p>
+              <li>Formulario simple que enviará una petición GET</li>
+                <form action="">
+                <label for="GET-name">Nombre:</label>
+                <input id="GET-name" type="text" name="name">
+                <input type="submit" value="Save">
+                </form>
+   
+              <li>Formulario simple que enviará una petición POST</li>
+                <form action="" method="post">
+                <label for="POST-name">Nombre:</label>
+                <input id="POST-name" type="text" name="name">
+                <input type="submit" value="Save">
+                </form>
+  
+              <li>Formulario con conjunto de campos, leyenda y etiqueta</li>
+                <form action="" method="post">
+                <fieldset>
+                <legend>Título</legend>
+                <input type="radio" name="radio" id="radio"> <label for="radio">Clic aquí</label>
+                </fieldset>
+                </form>
+      </article>
+
+      <article>
+          <h2 id="elemento_datalist">El elemento Datalist</h2>
+          <p>El elemento <code>datalist</code> representa la lista de elementos <code>option</code> como sugerencias cuando se llena un campo <code>input</code>.</p>
+          <p>Puedes usar el atributo <code>list</code> en un elemento <code>input</code> para enlazar a un campo de ingreso específico con un elemento <code>datalist</code> determinado.</p>
+          <ul>
+              <p>Ejemplo:</p>
+              <p><pre>
+                &lt;label&gt;Superhéroe favorito&lt;/label&gt;
+                &lt;input list="superheroes" name="list" /&gt;
+                &lt;datalist id="superheroes"&gt;
+                    &lt;option label="Iron Man" value="Iron Man"&gt;
+                    &lt;option label="The Hulk" value="The Hulk"&gt;
+                    &lt;/datalist&gt;
+              </pre></p>
+          </ul>
+          <p>Resultado:</p>
+            <label>Superhéroe favorito</label>
+            <input list="superheroes" name="list" />
+            <datalist id="superheroes">
+               <option label="Iron Man" value="Iron Man">
+               <option label="The Hulk" value="The Hulk">
+            </datalist>
+      </article>
+
+      <article>
+          <h2 id="elemento_output">El elemento Output</h2>
+          <p>Este elemento representa el resultado de un cálculo. Puedes usar el atributo <code>for</code> para especificar una relación entre el elemento output y otros elementos
+             en el documento que afectan al cálculo (por ejemplo, ingreso de datos o parámetros). El valor del atributo <code>for</code> es una lista separada por espacios de IDs de otros elementos.</p>
+          
+             <ul>
+                 <li>Ejemplo de una operación de potencia entre los números provistos:</li>
+                 <pre>&lt;p&gt;Base: &lt;input type="number" id="base" value="0" min="0" max="30"&gt;&lt;/p&gt;
+                 &lt;p&gt;Exponente: &lt;input type="number" id="exponente" value="0" min="0" max="30"&gt;&lt;/p&gt;
+                 &lt;p&gt;&lt;sinput type="button" value="Calcular" onclick="mostrarPotencia()"&gt;&lt;/p&gt;
+                 &lt;p&gt;Resultado: &lt;output id="potencia" for="base exponente"&gt;&lt;/output&gt;&lt;/p&gt;</pre>
+             </ul>
+
+             <p>Resultado de una operación de potencia entre los números provistos:</p>
+               <p>Base: <input type="number" id="base" value="0" min="0" max="30"></p>
+               <p>Exponente: <input type="number" id="exponente" value="0" min="0" max="30"></p>
+               <p><input type="button" value="Calcular" onclick="mostrarPotencia()"></p>
+               <p>Resultado: <output id="potencia" for="base exponente"></output></p>
+               
+      </article>
+
+      <article>
+          <h2 id="atributo_placeholder">El atributo Placeholder</h2>
+          <p>El atributo <code>placeholder</code> em elemento <code>input</code> y <code>textarea</code> proveen de ayuda a los usuarios acerca de qué debe ser ingresado en el campo visible.
+             El texto introducido no debe contener "enters" o saltos de línea.</p>
+          <ul>
+              <p>Ejemplo de placeholder:</p>
+              <pre>&lt;input type="email" id="user-email" placeholder="e.g. john.doe@mozilla.com" required/&gt;</pre> 
+          </ul>
+          <p>Resultado:</p>
+          <input type="email" id="user-email" placeholder="e.g. john.doe@mozilla.com" required/>
+      </article>
+
+      <article>
+          <h2 id="atributo_autofocus">El atributo Autofocus</h2>
+          <p>El atributo <b>autofocus</b> te permite especificar que una parte del formulario debe tener foco para ingresar información cuando se carga la página, a menos que el usuário
+            lo cambie, por ejemplo al escribir en otro lugar. Sólo un elemento del formulario en un documento puede tener el atributo autofocus, que es de tipo boolean. Este atributo puede
+            ser aplicado a los elementos <code>input</code>, <code>button</code>, <code>select</code> y <code>textarea</code>. La excepción es que autofocus no puede ser aplicado a un elemento 
+            <code>input</code> si el atributo "type" está seleccionado (es decir, no se puede enfocar automáticamente un elemento escondido).</p>
+          
+            <ul>
+                <p>Ejemplo:</p>
+                &lt;input type="text" id="user" autofocus /&gt;
+            </ul>
+      </article>
+
+      <article>
+        <h2 id="casillas_de_marcado">Casillas de marcado</h2>
+        <p>Existen dos tipos de casillas de marcado: las de tipo "radio" y las de tipo "checkbox". Las casillas de tipo radio son las que se usan normalmente 
+          cuando queremos que el usuario solo marque una casilla al mismo tiempo mientras que las de tipo checkbox son las que el usuario puede marcar varias 
+          al mismo tiempo.
+          Para crear estas casillas debemos incluirlas dentro del elemento &lt;form&gt;, y dichas casillas comenzarán con el marcado &lt;label for="#"&gt; para 
+          determinar su nombre etiqueta label. Después marcaremos el comienzo de la información sensible que recibiremos de parte de los servidores una vez sea mandada 
+          la respuesta por parte del usuário: &lt;input id="etiqueta de marcado" type="radio o checkbox" name="título del test" value="La información que recibiremos.
+          puede ser una palabra o un número como 0 o 1" y checked (si queremos que aparezca ya marcado al cargar la página)&gt;Texto &lt;/label&gt;
+        </p>
+        <ul>
+          <pre>
+    &lt;form&gt;
+    &lt;label for="indoor"&gt;&lt;input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked&gt; Indoor&lt;/label&gt;
+    &lt;label for="outdoor"&gt;&lt;input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"&gt; Outdoor&lt;/label&gt;
+    &lt;label for="loving"&gt;&lt;input id="loving" type="checkbox" name="personality" value="loving" checked&gt; Loving&lt;/label&gt;
+    &lt;label for="lazy"&gt;&lt;input id="lazy" type="checkbox" name="personality" value="lazy"&gt; Lazy&lt;/label&gt;
+    &lt;label for="energetic"&gt;&lt;input id="energetic" type="checkbox" name="personality" value="energetic"&gt; Energetic&lt;/label&gt;
+    &lt;input type="text" placeholder="cat photo URL" required&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+        </pre>
+        </ul>
+        <p>Resultado:</p>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+          <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
+          <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving" checked> Loving</label>
+          <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy"> Lazy</label>
+          <label for="energetic"><input id="energetic" type="checkbox" name="personality" value="energetic"> Energetic</label><br>
+          <input type="text" placeholder="cat photo URL" required>
+          <button type="submit">Submit</button>
+        </form>
+      </article>
+
+      <article>
+          <h2 id="validación_restringida">Validación restringida</h2>
+          <p>El HTML5 brinda sintaxis y elementos de API para posibilitar la validación de formularios del lado del cliente. Aunque esta funcionalidad no reemplaza la validación del lado del servidor, 
+              que todavía es necesaria por seguridad e integridad de la información, la validación del lado del cliente puede brindar una experiencia de usuario mejor al darle al usuario una respuesta 
+              inmediata acerca de la información ingresada.</p>
+            <h3>Sintaxis de HTML para la validación restringida</h3>
+            <li>El atributo required en los elementos &lt;input&gt;, &lt;select&gt; y &lt;textarea&gt; indica que se debe ingresar algún dato. (En el elemento &lt;input&gt;, 
+                required sólo se aplica con ciertos valores del atributo type.)</li>
+            <li>El atributo pattern en el elemento &lt;input&gt; restringe el valor para que concuerde con una expresión regular específica.</li>
+            <li>Los atributos min y max del elemento &lt;input&gt; restringen los valores máximos y mínimos que pueden ser ingresados.</li>
+            <li>El atributo step del elemento &lt;input&gt; (cuando se usa en combinación con los atributos min y max) restringe la granularidad de los valores ingresados. Un valor que no se corresponda con un valor permitido no será validado.</li> 
+            <li>El atributo <code>maxlength</code> de los elementos &lt;input&gt; y &lt;textarea&gt; restringe el máximo número de caracteres (en puntos de código unicode) que el usuario puede ingresar.</li>
+            <li>Los valores <code>url</code> y <code>email</code> para type restringen el valor para una URL o dirección de correo válida respectivamente.</li>   
+            <p>Además, puedes prevenir la validación restringida especificando el atributo novalidate en el elemento &lt;form&gt;, o el atributo formnovalidate en el elemento &lt;button&gt; y en el elemento &lt;input&gt; (cuando type es submit o image). 
+                Estos atributos indican que el formulario no será validado cuando se envie.</p>
+            
+      </article>
+
+      <main>
+        <aside>
+            <ul>
+              <p>Enlaces de interés</p>
+              <li><a href="https://github.com/">Github</a></li>
+            </ul>
+          </aside> 
+    </main>
+
+    <footer>
+      <address><p>2021 by Daniel Rodríguez   |   <a href="mailto:danielrodriguezsuarezbustillo@gmail.com">danielrodriguezsuarezbustillo@gmail.com</a></p></address>
+    </footer>
+
+  </body>
+
+  </html>

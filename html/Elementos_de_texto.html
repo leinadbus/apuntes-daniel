@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es-419">
+  <head>
+    <meta charset="utf-8">
+    <title>Apuntes Front End</title>
+
+    <meta name= "Author" content="Daniel rodreíguez">
+    <meta name="description" content="Curso básico para el aprendizaje de Front End">
+
+    <meta property="og:image" content="https://pbs.twimg.com/profile_images/1319636185917042688/w420P_NP_400x400.jpg">
+    <meta property="og:description" content="Este es el logotipo oficial de la marca personal.">
+    <meta property="og:title" content="????">
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"> </script>
+  </head>
+  <body>
+    <header>
+        <h1>Elementos de texto HTML</h1>
+      </header>
+      
+      <nav>
+        <ul id="barra_superior">
+          <li id="home"><a href="../Index.html">Home</a></li>
+          <li id="equipo"><a href="../nuestro_equipo.html">Nuestro equipo</a></li>
+          <li id="proyectos"><a href="../proyectos.html">Proyectos</a></li>
+          <li id="contacto"><a href="../contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    
+  
+
+      <article>
+        <h2 id="Énfasis_de_texto">Énfasis de texto</h2>
+         <p>De la palabra "Emphasis" para dar enfasis a las palabras usamos el comando &lt;em&gt;</p>
+          <ul>
+              <pre><p>Me &lt;em&gt;alegro&lt;/em&gt; de que no llegues &lt;em&gt;tarde&lt;/em&gt;.</p></pre>
+          </ul>
+          <p>Resultado: <br>
+            Me <em>alegro</em> de que no llegues <em>tarde</em>.</p>
+      </article>
+
+      <article>
+        <h2 id="Negrita_en_texto">Negrita en texto</h2>
+         <p>Se utiliza el comando &lt;strong&gt; para enmarcar palabras o frases importantes. El resultado visible es como la negrita, pero se uso principalmente para que los 
+           lectores de pantalla para ciegos entiendan qué palabras o frases son importantes y resalten su importancia en el contexto.
+         </p>
+          <ul>
+              <pre><p>Este líquido es altamente &lt;strong&gt;tóxico&lt;/strong&gt;.</p></pre>
+          </ul>
+          <p>Resultado:<br>
+            Este líquido es altamente <strong>tóxico</strong>.</p>   
+      </article>
+
+      <article>
+        <h2 id="Ibl">Itálica, Bold y lineado</h2>
+          <p>Estos casos no suelen ser usados gracias a la integración de CSS, sin embargo, viene bien
+              conocerlos para realizar ejercicios o para casos puntuales.<br>
+              Los comandos con los que enmarcaremos las palabras o frases son &lt;i&gt; para el formato Italic,
+              el comando &lt;b&gt; para el formato bold y el comando &lt;u&gt; para el formato underline.
+          </p>
+           <ul>
+              <pre><p>El &lt;i&gt;spanglish&lt;/i&gt; es &lt;u&gt;comunmente usado&lt;/u&gt; por los &lt;b&gt;paletos&lt;/b&gt;.</p></pre>
+           </ul>
+          <p>Resultado:<br>
+            El <i>spanglish</i> es <u>comunmente usado</u> por los <b>paletos</b>.</p>
+      </article>
+
+      <article>
+        <h2 id="Supsub">Superíndice y subíndice</h2>
+          <p>Se usan para marcar cosas como fechas o elementos químicos. Estos comando son &lt;sub&gt; para los subíndices
+              y &lt;sup&gt; para el superíndice.
+          </p>
+           <ul>
+               <pre>
+                   <p>Nací en el 25&lt;sup&gt;th&lt;/sup&gt; de mayo de 2001.</p>
+                   <p>La fórmula química de la cafeína es C&lt;sub&gt;8&lt;/sub&gt;H&lt;sub&gt;10&lt;/sub&gt;N&lt,sub&gt;4&lt;/sub&gt;O&lt;sub&gt;2&lt;/sub&gt;.</p>
+                   <p>Si x&lt;sup&gt;2&lt;/sup&gt; es 9, x debe ser igual a 3 o -3.</p>
+               </pre>
+           </ul>
+           <p>Resultado:</p>
+             <p>Nací el 25<sup>th</sup> de mayo de 2001.</p>
+             <p>La fórmula química de la cafeína es C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+             <p>If x<sup>2</sup> es 9, x debe ser igual 3 o -3.</p>     
+      </article>
+
+      <article>
+          <h2 id="Code_inf">Representación de código informático</h2>
+          <p>Estos son los elementos disponibles para marcar código:</p>
+            <li>&lt;code&gt;: Para marcar fragmentos genéricos de código informático.</li>
+            <li>&lt;pre&gt;: Para respetar los espacios en blanco (en general, en los bloques de código) — si utilizas la 
+             sangría o diversos espacios en blanco consecutivos dentro de un texto, los navegadores los 
+             ignorarán y no se mostrarán en la página. Sin embargo, si delimitas el texto con las etiquetas &lt;pre%gt; y %ñt;/pre&gt; 
+             los espacios en blanco se representarán de forma idéntica a como se ven en tu editor de texto.</li>
+            <li>&lt;var&gt;: Para marcar específicamente nombres de variables.</li>
+            <li>&lt;kdb&gt;: Para marcar entradas de teclado (y de otro tipo) en el ordenador.</li>
+            <li>&lt;samp&gt;: Para marcar la salida de un programa de ordenador.</li>
+           <ul>
+            <pre><p>&lt;pre&gt;&lt;code&gt;var para = document.querySelector('p');
+                para.onclick = function() {
+                alert('¡Guau!, ¡deja de apretar!');
+                }&lt;/code&gt;/lt;/pre&gt;
+            
+                &lt;p&gt;No debes utilizar elementos de presentación como %lt;code&gt;&lt;font&gt;&lt;/code&gt; y %lt;code&gt;&lt;center&gt;&lt;/code&gt;.&lt:/p&gt;
+            
+                &lt;p&gt;En el ejemplo de JavaScript anterior, &lt;var&gt;para&lt;/var&gt; representa un elemento de párrafo.&lt;/p&gt;
+            
+            
+                &lt;p&gt;Selecciona todo el texto con &lt;kbd&gt;Ctrl&lt;/kbd&gt;/&lt;kbd&gt;Cmd&lt;/kbd&gt; + &lt;kbd&gt;A&lt;/kbd&gt;.&lt;/p&gt;
+            
+                &lt;pre&gt;$ 6lt;kbd&gt;ping mozilla.org&lt;/kbd&gt;
+                &lt;samp6gt;PING mozilla.org (63.245.215.20): 56 bytes de datos
+                64 bytes de 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms&lt;/samp&gt;&lt;/pre&gt;</p></pre>
+           </ul>
+           <p>Resultado:</p>
+             <pre><code>var para = document.querySelector('p');
+
+              para.onclick = function() {
+              alert('¡Guau!, ¡deja de apretar!');
+              }</code></pre>
+        
+              <p>No debes utilizar elementos de presentación como <code>&lt;font&gt;</code> y <code>&lt;center&gt;</code>.</p>
+        
+              <p>En el ejemplo de JavaScript anterior, <var>para</var> representa un elemento de párrafo.</p>
+        
+        
+              <p>Selecciona todo el texto con <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
+        
+              <pre>$ <kbd>ping mozilla.org</kbd>
+              <samp>PING mozilla.org (63.245.215.20): 56 bytes de datos
+              64 bytes de 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+      </article>
+
+      <article>
+          <h2 id="Abr">Abreviaturas</h2>
+           <p>Un elemento que se usa para envolver una breviaturao acrónimo, que propiorciona un texto emergente
+              que define la misma, usando el comando &lt;abbr seguido de un atributo title="..."
+           </p>
+           <ul>
+               <pre><p>&lt;p&gt;Usamos &lt;abbr title="Lenguaje de marcado de hipertexto"&gt;HTML&lt;/abbr&gt; para estructurar
+                   nuestros documentos web.&lt;/p&gt;
+               </p></pre>
+           </ul>
+           <p>Resultado:</p>
+             <p>Usamos <abbr title="Lenguaje de marcado de hipertexto">HTML</abbr> para estructurar nuestros documentos web.</p>
+      </article>
+
+      <article>
+          <h2 id="Contact_inf">Marcar la información de contacto</h2>
+            <p>Utilizando el elemento &lt;adress&gt; se etiqueta la información de contacto.</p>
+             <ul>
+              <pre><p>&lt;adress&gt;&lt;p&gt; Daniel Rodríguez, Soto del Real, Madrid, España.&lt;/&gt;&lt;/adress&gt;</p></pre>
+             </ul>
+            <p>Resultado;</p>
+             <address><p>
+                 Daniel Rodríguez, Soto del Real, Madrid, España.
+             </p></address>
+      </article>
+
+      <article>
+          <h2 id="Dayandnight">Marcar fecha y hora</h2>
+           <p>Usamos el elemento &lt;time datetime=".."&gt;, es usado para que la máquina pueda leerlo,</p>
+           <p>Esto es útil si, por ejemplo, la web está siendo leida para invidentes o si queremos recoger todas las fechas en un calendario automáticamente.</p>
+            <ul>
+             <pre><p>&lt;time datetime="2021-04-06"&gt; 6 de Abril de 2021&lt;/time&gt;</p></pre>
+          </ul>
+          <p>Resultado;</p>
+          <time datetime="2021-04-06">6 de Abril de 2021</time>
+      </article>
+
+      <article>
+        <h2 id="br_hr_">&lt;br&gt; y &lt;hr&gt;</h2>
+         <h3>&lt;br&gt;: Se utiliza para dar un salto de línea.</h3>
+          <ul>
+           <pre><p>&lt;p&gt;En un lugar de la mancha &lt;br&gt; de cuyo nombre no quiero acordarme.</p></pre>
+          </ul>
+         <p>Resultado:</p>
+         <p>En un lugar de la mancha <br> de cuyo nombre no quiero acordarme.</p>
+
+         <h3>&lt;hr&gt;: Se utiliza para crear una línea horizontal que corte la página</h3>
+          <ul>
+           <pre><p>&lt;p&gt;En un lugar de la mancha &lt;br&gt; de cuyo nombre no quiero acordarme.</p>
+          &lt;hr&gt;
+          Un ¿hidalgo don caballero?
+          </pre>
+          <p>Resultado:</p>
+          <p>En un lugar de la mancha <br> de cuyo nombre no quiero acordarme.
+          <hr>
+          Un ¿hidalgo caballero?</p>
+          </ul>
+
+      </article>
+
+    
+    <main>
+        <aside>
+            <ul>
+              <p>Enlaces de interés</p>
+              <li><a href="https://github.com/">Github</a></li>
+            </ul>
+          </aside> 
+    </main>
+  
+      <footer>
+        <address><p>2021 by Daniel Rodríguez   |   <a href="mailto:danielrodriguezsuarezbustillo@gmail.com">danielrodriguezsuarezbustillo@gmail.com</a></p></address>
+      </footer>
+
+  </body>
+
+  </html>

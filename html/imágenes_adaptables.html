@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es-419">
+  <head>
+    <meta charset="utf-8">
+    <title>Apuntes Front End</title>
+
+    <meta name= "Author" content="Daniel rodreíguez">
+    <meta name="description" content="Curso básico para el aprendizaje de Front End">
+
+    <meta property="og:image" content="https://pbs.twimg.com/profile_images/1319636185917042688/w420P_NP_400x400.jpg">
+    <meta property="og:description" content="Este es el logotipo oficial de la marca personal.">
+    <meta property="og:title" content="????">
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"> </script>
+  </head>
+  <body>
+    <header>
+        <h1>Imágenes adaptables</h1>
+      </header>
+      
+      <nav>
+        <ul id="barra_superior">
+          <li id="home"><a href="../Index.html">Home</a></li>
+          <li id="equipo"><a href="../nuestro_equipo.html">Nuestro equipo</a></li>
+          <li id="proyectos"><a href="../proyectos.html">Proyectos</a></li>
+          <li id="contacto"><a href="../contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    
+     <article>
+         <h2>Cambio de resolución: Diferentes tamaños</h2>
+         <p>Queremos mostrar la misma imágen, más grande o más pequeña, dependiendo del dispositivo desde el cual sea vista. El elemento estandar &lt;img&gt; solo permite apuntar
+             el navegador a un solo archivo fuente:
+         </p>
+         <ul>
+            <pre>&lt;img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy"&gt;</pre>
+         </ul>
+         <p>Sin embargo, podemos utilizar dos nuevos atributos <code>-srcset</code> y <code>sizes-</code> para proporcionar varias imágenes de origen adicionales junto con sugerencias 
+        para ayudar al navegador a elegir el correcto.</p>
+        <ul>
+           <pre>
+        &lt;img srcset="elva-fairy-320w.jpg 320w,
+            elva-fairy-480w.jpg 480w,
+            elva-fairy-800w.jpg 800w"
+         sizes="(max-width: 320px) 280px,
+            (max-width: 480px) 440px,
+            800px"
+         src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy"&gt;  
+           </pre>
+        </ul>
+        <p>Los atributos <code>srcset</code> y <code>sizes</code> parecen complicados, pero resultan más fáciles de entender si los formatea como se muestra arriba, con valores diferentes para el atributo en cada
+             línea. Cada valor contiene una lista separada por coma, y cada parte de la lista está compuesta por tres sub-partes. Repasemos ahora el contenido de cada uno:</p>
+             <p><b>srcset</b> define el conjunto de imágenes que el navegador podrá elegir, y el tamaño de cada imagen. Cada conjunto de información de imagen está separado del anterior por una coma. Para cada uno, escribimos:</p>
+             <p>1. Un nombre de archivo de imagen (elva-fairy-480w.jpg)<br>
+                2. Un espacio.<br>
+                3. El <b>ancho intrínseco de la imagen en píxeles</b> (480w): tenga en cuenta que esto usa la unidad w, no px como cabría esperar. Este es el tamaño real de la imagen, que se puede encontrar inspeccionando el archivo
+                 de imagen en su computadora (por ejemplo, en una Mac puede seleccionar la imagen en Finder y presionar <kdb>Cmd</kdb> + <kdb>I</kdb> para que aparezca la pantalla de información).</p>
+            
+            <hr>
+        <p><b>sizes</b> define un conjunto de condiciones de medios (por ejemplo, anchos de pantalla) e indica qué tamaño de imagen sería mejor elegir cuando se cumplen ciertas condiciones de medios  — estas son las sugerencias de las que
+             hablamos anterriormente. En este caso, antes de cada coma escribimos:
+        </p>
+        <p>
+            1. Una condición de medios ((max-width: 600px)): aprenderá más sobre esto en el tema CSS, pero por ahora digamos que una condición de medios describe un posible estado en el que puede estar la pantalla. En este caso, estamos diciendo
+             "cuando el ancho de la ventana gráfica es de 600 píxeles o menos". <br>
+            2. Un espacio.<br>
+            3. El ancho de la ranura que la imagen llenará cuando la condición de medios sea verdadera (440px.)
+        </p>
+        <p><trong>Nota</trong>: Para el <b>ancho de la ranura</b>, debe indicar una longitud absoluta (<code>px,em</code>) o relativa (como un porcentaje).</p>
+     </article>
+
+      
+
+  
+
+      <main>
+        <aside>
+            <ul>
+              <p>Enlaces de interés</p>
+              <li><a href="https://github.com/">Github</a></li>
+            </ul>
+          </aside> 
+    </main>
+
+    <footer>
+      <address><p>2021 by Daniel Rodríguez   |   <a href="mailto:danielrodriguezsuarezbustillo@gmail.com">danielrodriguezsuarezbustillo@gmail.com</a></p></address>
+    </footer>
+
+  </body>
+
+  </html>
